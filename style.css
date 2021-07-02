@@ -363,7 +363,7 @@
 }
 
 .table-list.active td{
-    color: black;
+    color: white;
 }
 .table-list.active td:last-child{
     color: white;
