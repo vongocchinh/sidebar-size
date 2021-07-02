@@ -14,10 +14,12 @@ for(let i=0 ; i< myClick.length;i++){
 var toggle=document.querySelector('.toggle-size');
 var nar =document.querySelector('.container-navar');
 var navar =document.querySelector('.narvar');
+var headerName=document.querySelector('.header-name');
 toggle.onclick=()=>{
     toggle.classList.toggle('active')
     nar.classList.toggle('active');
     navar.classList.toggle('active')
+    headerName.classList.toggle('active');
 }
 
 
