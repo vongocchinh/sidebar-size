@@ -19,3 +19,16 @@ toggle.onclick=()=>{
     nar.classList.toggle('active');
     navar.classList.toggle('active')
 }
+
+
+var table = document.querySelectorAll('.table-list');
+for(let i=0 ; i< table.length;i++){
+    table[i].onclick=()=>{
+        let j=0;
+        while(j<table.length){
+            table[j].className='table-list';
+            j++;
+        }
+        table[i].className='table-list active';
+    }
+}
