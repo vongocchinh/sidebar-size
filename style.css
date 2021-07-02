@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("asset/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    min-width: 912px;
+}
+.container-bottom{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+
+@keyframes bubbles{
+    0%{
+        transform: translateY(0) ;
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-90vh) ;
+        opacity: 0;
+    }
+
+}
+
+.container-bottom img{
+    width: 50px;
+    animation: bubbles 5s linear infinite ;
+}
+.container-bottom img:nth-child(1){
+    animation-delay: 0s;
+    width: 20px;
+}
+.container-bottom img:nth-child(2){
+    animation-delay: 2s;
+    width: 20px;
+}
+.container-bottom img:nth-child(3){
+    animation-delay: 1s;
+    width: 30px;
+}
+.container-bottom img:nth-child(4){
+    animation-delay: 2.5s;
+    width: 40px;
+}
+.container-bottom img:nth-child(5){
+    animation-delay: 0s;
+    width: 25px;
+}
+.container-bottom img:nth-child(6){
+    animation-delay: 4s;
+    width: 35px;
+}
+.container-bottom img:nth-child(7){
+    animation-delay: 0s;
+    width: 45px;
+}
+.container-bottom img:nth-child(8){
+    animation-delay: 6s;
+    width: 20px;
+}
+
+
+
+.container-layout{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+.narvar{
+    width:70px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.narvar.active{
+    width:20% ;
+}
+/* navar */
+.container-navar{
+    width: 100%;
+    height: 95%;
+    border-radius: 15px;
+    background-color: #454FD7;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+/* .container-navar.active{
+    width: 90%;
+} */
+.container-navar  ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.container-navar  ul .click{
+    width: 95%;
+    height: 45px;
+    padding: 0px 15px;
+    margin-left: 5%;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container-navar  ul .click.active{
+    background-color: white;
+    color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.container-navar  ul .click .icon {
+    position: relative;
+    font-size: 18px;
+    display: block;
+    min-width: 40px;
+    height: 60px;
+    line-height: 62px;
+}
+
+.container-navar  ul .click .title {
+    font-size: 15px;
+    min-width: 100px;
+    position: relative;
+    display: block;
+
+}
+
+.container-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.main-right{
+    width: 100%;
+    height: 95%;
+}
+
+.toggle-size{
+    width: 30px;
+    height: 30px;
+    background-color: #454FD7;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.toggle-size.active{
+    /* background-color: #FED700; */
+}
+.toggle-size ion-icon{
+    font-size: 20px;
+    position: absolute;
+    color: white;
+
+}
+.toggle-size.active ion-icon.open,
+.toggle-size ion-icon.close
+{
+    display: block;
+}
+
+.toggle-size ion-icon.open,
+.toggle-size.active ion-icon.close{
+    display: none;
+}
+
+
+
+.container-navar ul .click b:nth-child(1){
+    position: absolute;
+    top: 0px;
+    height: 10px;
+    width: 100%;
+    background-color: black;
+}
+.container-navar ul .click b:nth-child(1)::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
